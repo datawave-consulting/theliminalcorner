@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>The Liminal Corner</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <!-- Masonry CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.min.css" />
+</head>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <a href="index.html" class="logo">The Liminal Corner</a>
+        </header>
+
+        <!-- Nav -->
+        <nav id="nav">
+            <ul class="links">
+                <li><a href="index.html">The Liminal Corner</a></li>
+                <li class="active"><a href="gallery.html">Gallery</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="about.html">About Liminality</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main -->
+        <div id="main">
+
+            <!-- Post -->
+            <section class="post">
+				<header class="major">
+					<h1>The Liminal Gallery</h1>
+                    <p>These images capture the unique, transitional beauty of liminal spaces in our city and beyond. You'll find a mix of everyday moments and extraordinary views, each evoking a sense of eeriness, nostalgia, and curiosity. 
+                        <br> While the majority of the photos are from Buenos Aires, we've also included shots from other intriguing locations. We hope these images transport you to the in-between spaces that hold stories untold and possibilities unexplored.
+                    </p>
+				</header>
+				<div class="gallery-container">
+					<div class="gallery-item"><img src="images/liminal1-lw.jpeg" alt="Liminal 1"></div>
+					<div class="gallery-item"><img src="images/liminal2-lw.jpeg" alt="Liminal 2"></div>
+					<div class="gallery-item"><img src="images/liminal3-lw.jpeg" alt="Liminal 3"></div>
+					<div class="gallery-item"><img src="images/liminal4-lw.jpeg" alt="Liminal 4"></div>
+					<div class="gallery-item"><img src="images/liminal5-lw.jpeg" alt="Liminal 5"></div>
+					<div class="gallery-item"><img src="images/liminal6-lw.jpeg" alt="Liminal 6"></div>
+					<div class="gallery-item"><img src="images/liminal7-lw.jpeg" alt="Liminal 7"></div>
+					<div class="gallery-item"><img src="images/liminal8-lw.jpg" alt="Liminal 8"></div>
+					<div class="gallery-item"><img src="images/liminal-pili.jpg" alt="Liminal 9"></div>
+				</div>
+            </section>
+
+        </div>
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <ul><li>&copy; The Liminal Corner</li><li>Design: <a href="https://datawaveconsulting.net" target="_blank">Datawave Consulting</a></li></ul>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const elem = document.querySelector('.gallery-container');
+            const msnry = new Masonry(elem, {
+                itemSelector: '.gallery-item',
+                columnWidth: '.gallery-item',
+                percentPosition: true,
+                gutter: 10
+            });
+
+            imagesLoaded(elem, function() {
+                msnry.layout();
+            });
+        });
+    </script>
+</body>
+</html>
